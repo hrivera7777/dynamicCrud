@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+    crud-web:
+        container_name: crud-web
+        build: .
+        ports:
+            - "85:80"
+        volumes:
+            - ${PROJECTFOLDER}:/var/www/crud
+            - ${PUBLICFOLDER}:/var/www/html/crud
+networks: 
+  default: 
+    name: web-programming
+    external: true
