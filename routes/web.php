@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('view');
 });
+
+Route::get('/create', function(){
+    return view('create');
+})->name('create');
