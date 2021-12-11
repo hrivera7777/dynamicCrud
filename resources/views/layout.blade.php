@@ -22,11 +22,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">View </a>
+            <li class="nav-item">
+              <a class="nav-link" href="/crud">View </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Create</a>
+              <a class="nav-link" href="create">Create</a>
             </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
@@ -42,9 +42,10 @@
     </main>
     <script src="/crud/js/app.js"></script>
 </body>
-<footer class="py-4 bg-primary mb-0">
-  <div class="container mb-0">
-      <div class="container d-flex align-items-center justify-content-between small">
+
+<footer class=" py-4 bg-primary mb-0">
+  <div class="container p-2 text-center">
+      <div class="align-items-center justify-content-between big">
           <div class="text-white">John Eder Posada Z. - Hans Rivera L - Luis Eduardo Ocampo W. &copy; Unal 2021</div>
       </div>
   </div>
