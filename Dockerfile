@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     iputils-ping \
     git \
     libpq-dev \
-    curl
+    curl 
 #composer installation and laravel extension
 RUN apt-get update --yes \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
@@ -36,4 +36,5 @@ RUN apt-get update --yes \
     && a2enmod rewrite        
 COPY ./memory-limit.ini /usr/local/etc/php/conf.d 
 COPY ./timezone.ini /usr/local/etc/php/conf.d
-
+RUN curl -fsSL https://fnm.vercel.app/install | bash -s -- --install-dir "/bin"
+RUN fnm install 14.9.0
