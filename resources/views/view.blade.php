@@ -19,7 +19,7 @@
           <div class="col-md-8">
             <div class="card-body">
               <h2 class="card-title mb-5">Card title</h2>
-              <button type="button" class="btn btn-secondary btn-md mr-5 px-4">Edit</button>
+              <a class="btn btn-secondary btn-md mr-5 px-4" href="edit">Edit</a>
               <button type="button" class="btn btn-danger btn-md px-4">Delete</button>
             </div>
           </div>
