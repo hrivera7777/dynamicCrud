@@ -1,12 +1,13 @@
-FROM php:7.2-apache as web
+FROM php:7.3-apache as web
 #dependencies and utilities
 RUN apt-get update && apt-get install -y \
+    libzip-dev \
     build-essential \
     libpng-dev \
     libjpeg62-turbo-dev \
     libfreetype6-dev \
     locales \
-    zip \
+    zip\
     jpegoptim optipng pngquant gifsicle \
     vim \
     unzip \
