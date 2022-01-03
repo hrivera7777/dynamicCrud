@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('view');
 });
 
+
 Route::get('/create', function(){
     return view('create');
 })->name('create');
@@ -24,3 +25,9 @@ Route::get('/create', function(){
 Route::get('/edit', function(){
     return view('edit');
 })->name('edit');
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
