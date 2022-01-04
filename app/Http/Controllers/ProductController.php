@@ -35,4 +35,11 @@ class ProductController extends Controller
 
         return view('succesful');
     }
+
+    public function viewGames()
+    {
+        $games = Product::all();
+        
+        return view('view',['games'=>$games]);
+    }
 }
