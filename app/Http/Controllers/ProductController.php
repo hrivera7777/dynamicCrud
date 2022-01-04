@@ -7,9 +7,8 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function newGame(Request $request)
+    public function setGameAttributes($game,Request $request)
     {
-        $game = new Product();
         $game->name = $request->title;
 
         if ($request->hasFile('image')) {
@@ -22,7 +21,6 @@ class ProductController extends Controller
             $fileNameToStore = $filename. '_'. time().'.'.$extension;
             //Upload Image
             $path = $request->file('image')->storeAs('public/image', $fileNameToStore);
-            
             }
         // Else add a dummy image
         else {
@@ -32,6 +30,12 @@ class ProductController extends Controller
         $game->fileName = $fileNameToStore;
 
         $game->save();
+    }
+
+    public function newGame(Request $request)
+    {
+        $game = new Product();
+        $this->setGameAttributes($game,$request);
 
         return view('succesful');
     }
@@ -41,5 +45,20 @@ class ProductController extends Controller
         $games = Product::all();
         
         return view('view',['games'=>$games]);
+    }
+
+    public function editGame($id)
+    {
+        $oldGame= Product::where('id', $id)->first();
+        return view('edit',['oldGame' =>$oldGame]);
+    }
+
+    public function changeGame(Request $request){
+        
+        $oldGame= Product::where('id', $request->input('idGame'))->first();
+        $this->setGameAttributes($oldGame,$request);
+
+        return view('succesful');
+
     }
 }
