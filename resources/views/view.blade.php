@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container-fluid px-4">
-    <h3 class="mt-4 container">View Products</h3>
+    <h3 class="mt-4">View Products</h3>
 
     <div class="row">
         @for ($i = 0; $i < 10; $i++)

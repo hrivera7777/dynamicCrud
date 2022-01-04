@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,6 +26,9 @@ Route::get('/create', function(){
 Route::get('/edit', function(){
     return view('edit');
 })->name('edit');
+
+// Route::get('/ingresoChocolateProd', [ChocolateProducido::class,'ingresoChocolateProd'])->name('ingresoChocolateProd');
+Route::post('/newGame', [ProductController::class,'newGame'])->name('newGame');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
