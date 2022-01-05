@@ -26,6 +26,7 @@ Route::get('/create', function () {
 Route::get('/edit/{id}', [ProductController::class, 'editGame'])->name('editGame');
 Route::post('/changeGame', [ProductController::class, 'changeGame'])->name('changeGame');
 
+Route::get('/delete/{id}', [ProductController::class, 'deleteGame'])->name('deleteGame');
 
 // Route::get('/ingresoChocolateProd', [ChocolateProducido::class,'ingresoChocolateProd'])->name('ingresoChocolateProd');
 Route::post('/newGame', [ProductController::class, 'newGame'])->name('newGame');

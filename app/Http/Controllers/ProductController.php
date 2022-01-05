@@ -61,4 +61,10 @@ class ProductController extends Controller
         return view('succesful');
 
     }
+
+    public function deleteGame($id)
+    {
+        Product::find($id)->delete();
+        return view('succesful');
+    }
 }
