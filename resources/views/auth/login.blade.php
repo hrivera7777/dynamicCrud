@@ -53,8 +53,4 @@
             </div>
         </form>
     </x-auth-card>
-    
 </x-guest-layout>
-{{-- @extends('layouts.guest')
-@section('guest_section') --}}
-{{-- @endsection --}}

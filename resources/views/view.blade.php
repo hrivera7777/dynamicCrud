@@ -18,8 +18,10 @@
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h2 class="card-title mb-5">{{ $game->name }}</h2>
+                                    @if (\Auth::check())
                                     <a class="btn btn-secondary btn-md mr-5 px-4" href="edit/{{$game->id}}">Edit</a>
                                     <a class="btn btn-danger btn-md px-4" href="delete/{{$game->id}}">Delete</a>
+                                    @endif
                                 </div>
                             </div>
                         </div>
