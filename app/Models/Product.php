@@ -10,4 +10,10 @@ class Product extends Model
     use HasFactory;
 
     protected $table = 'products';
+
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class)->withTimestamps();
+    }
 }
