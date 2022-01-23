@@ -21,11 +21,16 @@ Route::get('/create', function () {
 })->name('create');
 
 Route::get('/edit/{id}', [ProductController::class, 'editGame'])->name('editGame');
+
 Route::post('/changeGame', [ProductController::class, 'changeGame'])->name('changeGame');
 
 Route::get('/delete/{id}', [ProductController::class, 'deleteGame'])->name('deleteGame');
 
 Route::post('/newGame', [ProductController::class, 'newGame'])->name('newGame');
+
+Route::get('/viewBuyGame/{id}', [ProductController::class, 'viewBuyGame'])->name('viewBuyGame');
+
+Route::post('/buy', [ProductController::class, 'buyGame'])->name('buyGame');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
